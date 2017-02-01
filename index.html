@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js" defer></script>
+    <title>Gmail message ID finder</title>
+    <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/comcoiiifldaaejpbgbincdkoohihbae">
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-91256634-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+<body>
+<main class="page_wrapper">
+    <div class="cover cover--08 js-cover">
+        <nav class="header header--06 hidden-xs-down">
+            <div class="container header__container">
+                <div class="header__left_box">
+                    <a href="#" title="Home" class="header__logo_box"><img src="img/logo.svg" alt="Gmail message ID finder" class="header__logo_img"></a>
+                </div>
+                <div class="header__name_box">
+                    <div class="name">Gmail message ID finder</div>
+                    <div class="tagline">A
+                        <a href="http://code-orange.nl/"><img src="img/co-logo.svg" alt="Code Orange" class="co-logo"></a> project
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="cover__content_box cover__content_box--08">
+                <h2 class="cover__title cover__title--08"><span class="cover__title_text cover__title_text--08">Never not find an email again</span>
+                </h2>
+
+                <div class="cover__description_box--08"><span class="cover__description_text--08">
+                    Every email you send or receive has a unique identifier that you can use to get to the email later.
+                    Gmail message ID finder is a Chrome extension that adds a menu item to Gmail so you can quickly find it.
+                </span>
+                </div>
+                <button type="button" data-popup-target="video" class="button--play-icon cover__video_button_box--08 js-open-popup">
+                    <img src="img/screenshot.png" class="cover__video_button_img--08">
+                </button>
+                <a href="#" class="button button--dark-shadow button--blue" onclick="chrome.webstore.install()" id="install-button">install now</a>
+                <script>
+                    if (chrome && chrome.app.isInstalled) {
+                       document.getElementById('install-button').style.display = 'none';
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+    <!--div class="features features--03">
+        <div class="container">
+            <div class="features__title_box features__title_box--03">
+                <h2 class="features__title--03">Use case header</h2>
+                <span class="features__description features__description--03">Tagline</span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row features__row">
+                <div class="col-xs-12 col-lg-4 features__item features__item--03">
+                    <div class="features__item_icon_circle features__item_icon_circle--play-icon"></div>
+                    <h3 class="features__item_title">UC1</h3><span class="features__item_text">Use case description.</span>
+                </div>
+                <div class="col-xs-12 col-lg-4 features__item features__item--03">
+                    <div class="features__item_icon_circle features__item_icon_circle--star-icon"></div>
+                    <h3 class="features__item_title">UC2</h3><span class="features__item_text">Use case description.</span>
+                </div>
+                <div class="col-xs-12 col-lg-4 features__item features__item--03">
+                    <div class="features__item_icon_circle features__item_icon_circle--code-icon"></div>
+                    <h3 class="features__item_title">UC3</h3><span class="features__item_text">Use case description.</span>
+                </div>
+            </div>
+        </div>
+    </div-->
+    <div data-popup-name="video" class="popup popup--video js-popup">
+        <button title="close" class="popup__close_btn js-close-all-popups"></button>
+        <iframe src="https://www.youtube.com/embed/FakcSZi_p7M" frameborder="0" allowfullscreen class="popup__video_frame"></iframe>
+    </div>
+</main>
+</body>
+<div class="js-overlay js-close-navigation js-close-menu overlay"></div>
+</html>
