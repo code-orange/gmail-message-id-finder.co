@@ -46,11 +46,17 @@
                 <button type="button" data-popup-target="video" class="button--play-icon cover__video_button_box--08 js-open-popup">
                     <img src="img/screenshot.png" class="cover__video_button_img--08">
                 </button>
-                <a href="#" class="button button--dark-shadow button--blue" onclick="chrome.webstore.install()" id="install-button">install now</a>
+                <a href="https://chrome.google.com/webstore/detail/gmail-message-id-finder/comcoiiifldaaejpbgbincdkoohihbae" class="button button--dark-shadow button--blue" onclick="install(event)">install now</a>
                 <script>
-                    if (chrome && chrome.app.isInstalled) {
-                       document.getElementById('install-button').style.display = 'none';
-                    }
+                    function install(e) {
+						if (chrome && chrome.webstore) {
+							e.preventDefault();
+							chrome.webstore.install();
+							return false;
+						} else {
+							return true;
+						}
+					}
                 </script>
             </div>
         </div>
