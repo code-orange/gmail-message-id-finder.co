@@ -55,6 +55,7 @@
                     function install(e) {
 						if (chrome && chrome.webstore) {
 							e.preventDefault();
+							ga('send', 'event', 'extension', 'install');
 							chrome.webstore.install();
 							return false;
 						} else {
